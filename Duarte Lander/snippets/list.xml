@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pack>
+    <snippet attachedevent="true" class="scripts.ActorEvents_2" classname="scripts.ActorEvents_2" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_2" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="XSpeed" hidden="false" id="1" name="_XSpeed" order="0"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="YSpeed" hidden="false" id="2" name="_YSpeed" order="1"/>
+        <number default="0.05" defaultValue="0.05" desc="" dropdown="" fullname="G" hidden="false" id="3" name="_G" order="2"/>
+        <number default="0.1" defaultValue="0.1" desc="" dropdown="" fullname="YPropulsion" hidden="false" id="4" name="_YPropulsion" order="3"/>
+        <number default="0.02" defaultValue="0.02" desc="" dropdown="" fullname="XPropulsion" hidden="false" id="5" name="_XPropulsion" order="4"/>
+        <number default="0.005" defaultValue="0.005" desc="" dropdown="" fullname="friction" hidden="false" id="6" name="_friction" order="5"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="flying" hidden="false" id="7" name="_flying" order="8"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="gliding" hidden="false" id="8" name="_gliding" order="6"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="isOver" hidden="false" id="9" name="_isOver" order="7"/>
+        <number default="5.0" defaultValue="5.0" desc="" dropdown="" fullname="LandingSpeed" hidden="false" id="11" name="_LandingSpeed" order="9"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="isMoving" hidden="false" id="12" name="_isMoving" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="LandingTriggered" hidden="false" id="13" name="_LandingTriggered" order="11"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Multiplier" hidden="false" id="14" name="_Multiplier" order="12"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="CrashingTriggered" hidden="false" id="15" name="_CrashingTriggered" order="13"/>
+        <blocks/>
+        <events>
+            <event displayName="Movement" enabled="true" id="3" name="step" order="4" repeats="true"/>
+            <event displayName="ResetSpeed" enabled="true" id="4" name="collide" order="10" repeats="true"/>
+            <event displayName="Boundaries" enabled="true" id="5" name="step" order="6" repeats="true"/>
+            <event displayName="Created" enabled="true" id="6" name="init" order="2" repeats="true"/>
+            <event displayName="Collision" enabled="true" id="8" name="event-collide-actortogroup" order="11" repeats="true"/>
+            <event displayName="FuelManipulating" enabled="true" id="9" name="step" order="9" repeats="true"/>
+            <event displayName="AnimationManipuling" enabled="true" id="10" name="step" order="8" repeats="true"/>
+            <event displayName="Game Over" enabled="true" id="11" name="step" order="16" repeats="true"/>
+            <event displayName="Landing" enabled="true" id="12" name="event-custom" order="13" repeats="true"/>
+            <event displayName="SpeedSetting" enabled="true" id="13" name="step" order="5" repeats="true"/>
+            <event displayName="PlaySoundFX" enabled="true" id="14" name="event-key-press-release" order="17" repeats="true"/>
+            <event displayName="StopSoundFX" enabled="true" id="15" name="event-key-press-release" order="19" repeats="true"/>
+            <event displayName="Crashing" enabled="true" id="16" name="event-custom" order="12" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.ActorEvents_4" classname="scripts.ActorEvents_4" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="3" name="ActorEvents_4" oid="-1" package="scripts." scenespecific="false" shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="4" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" scenespecific="true" shared="false" type="scene">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="isOver" hidden="false" id="1" name="_isOver" order="0"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="SpeedToTxt" hidden="false" id="2" name="_SpeedToTxt" order="1"/>
+        <blocks/>
+        <events>
+            <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
+            <event displayName="Game Over" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+        </events>
+    </snippet>
+</pack>
